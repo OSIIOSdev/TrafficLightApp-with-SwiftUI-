@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		694DFA7D2900221100B08A83 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694DFA7C2900221100B08A83 /* CircleView.swift */; };
 		69A69D9428FF2D4A00428067 /* TrafficLightApp_with_SwiftUI_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A69D9328FF2D4A00428067 /* TrafficLightApp_with_SwiftUI_App.swift */; };
 		69A69D9628FF2D4A00428067 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A69D9528FF2D4A00428067 /* ContentView.swift */; };
 		69A69D9828FF2D4D00428067 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A69D9728FF2D4D00428067 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		694DFA7C2900221100B08A83 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		69A69D9028FF2D4A00428067 /* TrafficLightApp-with-SwiftUI-.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TrafficLightApp-with-SwiftUI-.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A69D9328FF2D4A00428067 /* TrafficLightApp_with_SwiftUI_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightApp_with_SwiftUI_App.swift; sourceTree = "<group>"; };
 		69A69D9528FF2D4A00428067 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				69A69D9328FF2D4A00428067 /* TrafficLightApp_with_SwiftUI_App.swift */,
 				69A69D9528FF2D4A00428067 /* ContentView.swift */,
+				694DFA7C2900221100B08A83 /* CircleView.swift */,
 				69A69D9728FF2D4D00428067 /* Assets.xcassets */,
 				69A69D9928FF2D4D00428067 /* Preview Content */,
 			);
@@ -139,6 +142,7 @@
 			files = (
 				69A69D9628FF2D4A00428067 /* ContentView.swift in Sources */,
 				69A69D9428FF2D4A00428067 /* TrafficLightApp_with_SwiftUI_App.swift in Sources */,
+				694DFA7D2900221100B08A83 /* CircleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +278,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -281,9 +286,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.OSIIOSdev.TrafficLightApp-with-SwiftUI-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,6 +310,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,9 +318,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.OSIIOSdev.TrafficLightApp-with-SwiftUI-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

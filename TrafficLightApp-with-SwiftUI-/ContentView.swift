@@ -5,43 +5,58 @@
 //  Created by Илья on 18.10.2022.
 //
 
+enum Lights {
+    case red
+    case yellow
+    case green
+}
+
 import SwiftUI
 
 struct ColorCircleView: View {
-    @State private var opacityValue = 0.3
+    @State private var activeLight = [false, false, false]
+    
+    @State private var currentLight = Lights.red
+    
     @State private var nextButtonLabel = "NEXT"
     @State private var startButtonLabel = "START"
     
     var body: some View {
         VStack {
             VStack {
-                Circle()
-                    .foregroundColor(.red)
-                    .opacity(opacityValue)
-                    .frame(width: 150, height: 150)
-                Circle()
-                    .foregroundColor(.yellow)
-                    .opacity(opacityValue)
-                    .frame(width: 150, height: 150)
-                Circle()
-                    .foregroundColor(.green)
-                    .opacity(opacityValue)
-                    .frame(width: 150, height: 150)
+                CircleView(color: .red, isActive: activeLight[0])
+                CircleView(color: .yellow, isActive: activeLight[1])
+                CircleView(color: .green, isActive: activeLight[2])
             }
             .padding()
             
             Spacer()
             
             VStack {
-                
                 Button {
-                    opacityValue = 1
                     startButtonLabel = nextButtonLabel
                     
-                    
+                    switch currentLight {
+                    case .red:
+                        activeLight[0].toggle()
+                        activeLight[2] = false
+                        currentLight = Lights.yellow
+                    case .yellow:
+                        activeLight[0].toggle()
+                        activeLight[1].toggle()
+                        currentLight = Lights.green
+                    case .green:
+                        activeLight[1].toggle()
+                        activeLight[2].toggle()
+                        currentLight = Lights.red
+                    }
                 } label: {
                     Text(startButtonLabel)
                         .font(.title)
+                        .padding(.horizontal, 10)
+                        .foregroundColor(.white)
+                        .background(Color(UIColor.systemBlue))
+                        .cornerRadius(10)
                 }
                 .padding()
             }
