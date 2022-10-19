@@ -7,20 +7,50 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ColorCircleView: View {
+    @State private var opacityValue = 0.3
+    @State private var nextButtonLabel = "NEXT"
+    @State private var startButtonLabel = "START"
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            VStack {
+                Circle()
+                    .foregroundColor(.red)
+                    .opacity(opacityValue)
+                    .frame(width: 150, height: 150)
+                Circle()
+                    .foregroundColor(.yellow)
+                    .opacity(opacityValue)
+                    .frame(width: 150, height: 150)
+                Circle()
+                    .foregroundColor(.green)
+                    .opacity(opacityValue)
+                    .frame(width: 150, height: 150)
+            }
+            .padding()
+            
+            Spacer()
+            
+            VStack {
+                
+                Button {
+                    opacityValue = 1
+                    startButtonLabel = nextButtonLabel
+                    
+                    
+                } label: {
+                    Text(startButtonLabel)
+                        .font(.title)
+                }
+                .padding()
+            }
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ColorCircleView()
     }
 }
