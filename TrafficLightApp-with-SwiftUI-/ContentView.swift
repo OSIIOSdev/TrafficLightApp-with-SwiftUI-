@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  TrafficLightApp-with-SwiftUI-
 //
-//  Created by Илья on 18.10.2022.
+//  Created by OSIIOSdev on 18.10.2022.
 //
 
 import SwiftUI
