@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59833C282909CF700008BBEB /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59833C272909CF700008BBEB /* StartButtonView.swift */; };
 		694DFA7D2900221100B08A83 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694DFA7C2900221100B08A83 /* CircleView.swift */; };
 		69A69D9428FF2D4A00428067 /* TrafficLightApp_with_SwiftUI_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A69D9328FF2D4A00428067 /* TrafficLightApp_with_SwiftUI_App.swift */; };
 		69A69D9628FF2D4A00428067 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A69D9528FF2D4A00428067 /* ContentView.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59833C272909CF700008BBEB /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 		694DFA7C2900221100B08A83 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		69A69D9028FF2D4A00428067 /* TrafficLightApp-with-SwiftUI-.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TrafficLightApp-with-SwiftUI-.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A69D9328FF2D4A00428067 /* TrafficLightApp_with_SwiftUI_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightApp_with_SwiftUI_App.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				69A69D9328FF2D4A00428067 /* TrafficLightApp_with_SwiftUI_App.swift */,
 				69A69D9528FF2D4A00428067 /* ContentView.swift */,
+				59833C272909CF700008BBEB /* StartButtonView.swift */,
 				694DFA7C2900221100B08A83 /* CircleView.swift */,
 				69A69D9728FF2D4D00428067 /* Assets.xcassets */,
 				69A69D9928FF2D4D00428067 /* Preview Content */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69A69D9628FF2D4A00428067 /* ContentView.swift in Sources */,
+				59833C282909CF700008BBEB /* StartButtonView.swift in Sources */,
 				69A69D9428FF2D4A00428067 /* TrafficLightApp_with_SwiftUI_App.swift in Sources */,
 				694DFA7D2900221100B08A83 /* CircleView.swift in Sources */,
 			);

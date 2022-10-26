@@ -5,67 +5,73 @@
 //  Created by Илья on 18.10.2022.
 //
 
+import SwiftUI
+
 enum Lights {
     case red
     case yellow
     case green
 }
 
-import SwiftUI
-
-struct ColorCircleView: View {
-    @State private var activeLight = [false, false, false]
+struct ContentView: View {
+    @State private var buttonTitle = "START"
+    
+    @State private var redLightState = 0.3
+    @State private var yellowLightState = 0.3
+    @State private var greenLightState = 0.3
     
     @State private var currentLight = Lights.red
     
     @State private var nextButtonLabel = "NEXT"
     @State private var startButtonLabel = "START"
     
+    private func nextColor() {
+        let lightOn = 1.0
+        let lightOff = 0.3
+        
+        switch currentLight {
+        case .red:
+            currentLight = .yellow
+            greenLightState = lightOff
+            redLightState = lightOn
+        case .yellow:
+            currentLight = .green
+            redLightState = lightOff
+            yellowLightState = lightOn
+        case .green:
+            currentLight = .red
+            yellowLightState = lightOff
+            greenLightState = lightOn
+        }
+    }
+}
+
+extension ContentView {
     var body: some View {
-        VStack {
-            VStack {
-                CircleView(color: .red, isActive: activeLight[0])
-                CircleView(color: .yellow, isActive: activeLight[1])
-                CircleView(color: .green, isActive: activeLight[2])
-            }
-            .padding()
+        ZStack {
+            Color(.black)
+                .ignoresSafeArea()
             
-            Spacer()
-            
-            VStack {
-                Button {
-                    startButtonLabel = nextButtonLabel
-                    
-                    switch currentLight {
-                    case .red:
-                        activeLight[0].toggle()
-                        activeLight[2] = false
-                        currentLight = Lights.yellow
-                    case .yellow:
-                        activeLight[0].toggle()
-                        activeLight[1].toggle()
-                        currentLight = Lights.green
-                    case .green:
-                        activeLight[1].toggle()
-                        activeLight[2].toggle()
-                        currentLight = Lights.red
+            VStack(spacing: 20) {
+                CircleView(color: .red, opacity: redLightState)
+                CircleView(color: .yellow, opacity: yellowLightState)
+                CircleView(color: .green, opacity: greenLightState)
+                
+                Spacer()
+                
+                StartButtonView(title: buttonTitle) {
+                    if buttonTitle == "START" {
+                        buttonTitle = "NEXT"
                     }
-                } label: {
-                    Text(startButtonLabel)
-                        .font(.title)
-                        .padding(.horizontal, 10)
-                        .foregroundColor(.white)
-                        .background(Color(UIColor.systemBlue))
-                        .cornerRadius(10)
+                    nextColor()
                 }
-                .padding()
-            }
+            }.padding()
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ColorCircleView()
+        ContentView()
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct TrafficLightApp_with_SwiftUI_App: App {
     var body: some Scene {
         WindowGroup {
-            ColorCircleView()
+            ContentView()
         }
     }
 }
